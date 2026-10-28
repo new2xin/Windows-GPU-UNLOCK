@@ -1,0 +1,58 @@
+{
+  "ReviewedAt": "2026-10-28T11:30:46.296398+09:00",
+  "HardwareUnlockConfirmed": true,
+  "SuccessfulPhysicalBootsObserved": 2,
+  "WrapperVersion": 6,
+  "ChildVersion": 6,
+  "ObservedSuccessfulBoots": [
+    {
+      "WindowsBoot": "2026-10-27T13:44:08.5000000+09:00",
+      "LogFiles": [
+        {
+          "Path": "HLS000006.TXT",
+          "Bytes": 716591,
+          "Sha256": "9C9533FCD8147FC3C3B4014EAA24D1443F2F99636F4FB40502418EE4A08EDA15",
+          "LastWriteTime": "2026-10-27T13:44:06.0000000+09:00"
+        },
+        {
+          "Path": "AUTO000001\\REPORT.TXT",
+          "Bytes": 14794,
+          "Sha256": "426728B5AB4D7415480730360A4DF8066B2969BD220960250B30A4B01DC5D2CB",
+          "LastWriteTime": "2026-10-27T13:44:06.0000000+09:00"
+        }
+      ],
+      "Transaction": "transaction result=0 containment=0 started=1 quiesced=1 fault=0 retained=0 maps=0 FLR=1",
+      "Final": "FINAL status=0 stage=transaction attempted=1 driver_release=0 clean=1",
+      "EntrySs0": "0x11515124",
+      "EntrySs1": "0x6",
+      "FinalSs0": "0x88888888",
+      "FinalSs1": "0x8"
+    },
+    {
+      "WindowsBoot": "2026-10-28T10:35:34.5000000+09:00",
+      "LogFiles": [
+        {
+          "Path": "HLS000007.TXT",
+          "Bytes": 723757,
+          "Sha256": "244C47C2EFFFC5198AE76EF82E7DE4D44C896DA6F8BD4CDD4678EF316CF9C568",
+          "LastWriteTime": "2026-10-28T10:35:32.0000000+09:00"
+        },
+        {
+          "Path": "AUTO000002\\REPORT.TXT",
+          "Bytes": 14793,
+          "Sha256": "A5FDBAF4C88DDBD66A15042BA98746F9EF4DE462C0AA06E1A6BEAAC6FE5E3064",
+          "LastWriteTime": "2026-10-28T10:35:32.0000000+09:00"
+        }
+      ],
+      "Transaction": "transaction result=0 containment=0 started=1 quiesced=1 fault=0 retained=0 maps=0 FLR=1",
+      "Final": "FINAL status=0 stage=transaction attempted=1 driver_release=0 clean=1",
+      "EntrySs0": "0x10515124",
+      "EntrySs1": "0x6",
+      "FinalSs0": "0x88888888",
+      "FinalSs1": "0x8"
+    }
+  ],
+  "LongTermStabilityTested": false,
+  "RawLogsIncluded": false,
+  "Description": "Reviewed excerpts and original raw-log hashes; private raw captures are not bundled."
+}

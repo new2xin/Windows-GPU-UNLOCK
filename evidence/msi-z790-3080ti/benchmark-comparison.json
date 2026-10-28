@@ -1,0 +1,97 @@
+{
+  "HardwareUnlockConfirmed": true,
+  "TensorBenchmarkSpeedupObserved": true,
+  "GeneralApplicationSpeedupTested": false,
+  "MatchingFiles": [
+    {
+      "File": "compute-benchmark-3090.cu",
+      "Sha256": "CB4BB2F3455CDDBEBB0299265EDC0510A27089E8A705AB16A57085204F7F2828"
+    },
+    {
+      "File": "compute-benchmark-3080ti.cu",
+      "Sha256": "FC1F1C212132ED87A6BBC1AAC1631B8B853E9741AF3D48686DF5394BB40312D7"
+    },
+    {
+      "File": "nvcc.exe",
+      "Sha256": "2D75EEA1AD2C5CB392E41774F73DAEDE73DB57CC2272198DF4EAE325CFD84E65"
+    },
+    {
+      "File": "cublas64_12.dll",
+      "Sha256": "A334091BE5BCD4C10EF06EF5469C494370E39761711D843D69E4315DF56A4F9C"
+    },
+    {
+      "File": "cublasLt64_12.dll",
+      "Sha256": "020B83CC47B1A94AA0ED695B7876EE5C6FD8B71A3B6FAA8F94A4A8780BEB7D8D"
+    }
+  ],
+  "SameGpu": true,
+  "SameDriver": true,
+  "SameCudaCublas": true,
+  "SameBenchmarkSource": true,
+  "PowerLimitWatts": 269.5,
+  "ClocksSettingsUnchanged": true,
+  "ClocksFixed": false,
+  "GpuIdleBeforeBothRuns": true,
+  "Method": {
+    "Trials": 3,
+    "Statistic": "median of the three per-trial medians",
+    "MatrixN": 4096,
+    "SamplesPerTrialPerPrecision": 30,
+    "WarmupSeconds": 2,
+    "CorrectnessCheck": "all-ones product; first and last output elements checked against 4096"
+  },
+  "Results": [
+    {
+      "Name": "fp32_pedantic",
+      "StockTflops": 25.587366999999997,
+      "UnlockedTflops": 25.575025,
+      "Ratio": 0.9995176525978622,
+      "ChangePercent": -0.04823474021378171,
+      "StockRange": [
+        25.551518,
+        25.596363
+      ],
+      "UnlockedRange": [
+        25.573121,
+        25.652241
+      ]
+    },
+    {
+      "Name": "fp16_tensor_fp32_accumulate",
+      "StockTflops": 73.498655,
+      "UnlockedTflops": 124.50624800000001,
+      "Ratio": 1.6939935567528415,
+      "ChangePercent": 69.39935567528414,
+      "StockRange": [
+        72.493183,
+        74.112493
+      ],
+      "UnlockedRange": [
+        124.390856,
+        126.382035
+      ]
+    },
+    {
+      "Name": "bf16_tensor_fp32_accumulate",
+      "StockTflops": 72.491957,
+      "UnlockedTflops": 124.50624800000001,
+      "Ratio": 1.7175180965248327,
+      "ChangePercent": 71.75180965248327,
+      "StockRange": [
+        72.471775,
+        73.08156699999999
+      ],
+      "UnlockedRange": [
+        123.475369,
+        125.437129
+      ]
+    }
+  ],
+  "MeasuredAt": "2026-10-27",
+  "Limitations": [
+    "Two successful physical boots reviewed by 2026-10-28; benchmark measured after the first.",
+    "Short GEMM benchmark; application speed and long-term stability not measured.",
+    "Separate boots; temperatures and dynamic clocks not held identical.",
+    "Correctness check inspects the first and last output elements, not the complete matrix."
+  ]
+}
