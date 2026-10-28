@@ -1,5 +1,7 @@
 # Windows GPU UNLOCK — MSI Z790 / RTX 3080 Ti 移植版
 
+**自動起動に関する訂正（2026-10-28）:** BIOSのBoot OverrideからKIOXIAを手動選択する必要があると判明しました。実解除・Windows引継ぎ・ベンチ結果は有効ですが、無操作の自動起動は未確認です。15:12に、USBの媒体IDと `\EFI\BOOT\BOOTX64.EFI` を明示する新しい起動項目を先頭へ設定しました。修正後の電源投入テストは確認待ちです。
+
 Palit RTX 3080 TiをMSI PRO Z790-P WIFI DDR4（BIOS 1.I0）で検証した、実験的なUSB UEFI移植版です。2026年10月27日・28日の2回、実解除・正常な後処理・Windowsへの直接引継ぎを確認しました。
 
 | 演算 | 未解除 TFLOPS | 解除後 TFLOPS | 変化 |

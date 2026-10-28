@@ -1,5 +1,7 @@
 # MSI Z790 / Palit RTX 3080 Ti — 公開用ソース
 
+**自動起動に関する訂正（2026-10-28）:** BIOSのBoot OverrideからKIOXIAを手動選択する必要があると判明しました。実解除・Windows引継ぎ・ベンチ結果は有効ですが、無操作の自動起動は未確認です。15:12に、USBの媒体IDと `\EFI\BOOT\BOOTX64.EFI` を明示する新しい起動項目を先頭へ設定しました。修正後の電源投入テストは確認待ちです。
+
 ## 検証済み構成
 
 MSI PRO Z790-P WIFI DDR4 / BIOS 1.I0、Core i9-13900K、Palit RTX 3080 Ti 12 GB、PCI 10de:2208 / subsystem 1569:2208、VBIOS 94.02.71.80.52。Secure Bootは無効。Windows 10 Enterprise 19045、NVIDIA 591.74で検証しました。
